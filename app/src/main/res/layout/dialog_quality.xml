@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog_quality"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/rounded_corners"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/dialog33"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="Nueva Opcion de Calidad!"
+            android:textColor="@color/gnt_black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/quality_txt"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="50dp"
+            android:layout_height="37dp"
+            app:srcCompat="@drawable/audio_quality" />
+
+
+    </LinearLayout>
+
+    <RadioButton
+        android:id="@+id/radioButtonNoMostrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No volver a mostrar"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/btnAceptar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:textColor="@color/gnt_white"
+        android:background="@drawable/btn_drawable"
+        android:text="Aceptar" />
+
+
+
+</LinearLayout>

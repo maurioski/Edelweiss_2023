@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <item
+        android:title="@string/sociales"
+        android:textAppearance="@font/stockholm">
+
+        <menu>
+
+            <item
+                android:id="@+id/vivo"
+                android:icon="@drawable/youtube"
+                android:title="@string/en_vivo"/>
+
+            <item
+                android:id="@+id/facebook"
+                android:icon="@drawable/facebook"
+                android:title="@string/facebook_menu" />
+
+            <item
+                android:id="@+id/insta"
+                android:icon="@drawable/instagram"
+                android:title="@string/instagram"/>
+
+            <item
+                android:id="@+id/whatsapp"
+                android:icon="@drawable/whatsapp"
+                android:title="@string/whatsapp"/>
+
+
+        </menu>
+
+    </item>
+    <item
+        android:title="@string/contacto">
+
+        <menu>
+
+            <item
+                android:id="@+id/email"
+                android:icon="@drawable/email"
+                android:title="@string/e_mail"/>
+
+            <item
+                android:id="@+id/telefono"
+                android:icon="@drawable/phonecall"
+                android:title="@string/telefono_menu" />
+
+            <!--
+
+            <item
+                android:id="@+id/web"
+                android:icon="@drawable/globe"
+                android:title="@string/website"/>
+            -->
+
+        </menu>
+
+    </item>
+
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/qr"
+            android:icon="@drawable/qrcode"
+            android:title="Comparte la App!"
+            />
+
+        <item
+            android:id="@+id/about1"
+            android:icon="@drawable/info"
+            android:title="@string/acerca_de_nosotros"/>
+
+        <!--
+        <item
+            android:id="@+id/ver"
+            android:icon="@drawable/sketch"
+            android:title="Build 2.5"/>
+        -->
+
+
+    </group>
+
+
+</menu>
+
+

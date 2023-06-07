@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gnt_black">
+
+    <com.scwang.wave.MultiWaveHeader
+        android:id="@+id/waveHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:mwhCloseColor="@color/edelweiss"
+        app:mwhColorAlpha="0.45"
+        app:mwhGradientAngle="30"
+        app:mwhStartColor="@color/edelweiss"
+        app:mwhVelocity="1"
+        app:mwhWaveHeight="15dp"
+        app:mwhWaves="MultiWave" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:src="@drawable/logo_menu"
+        android:layout_marginTop="12dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/stockholm"
+        android:text="Radio Edelweiss"
+        android:textColor="@color/gnt_white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/stockholm"
+        android:text="www.edelweiss.fm"
+        android:textColor="@color/gnt_white"
+        android:textColorLink="@color/gnt_white"
+        android:textSize="12sp"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="7dp"
+        android:autoLink="web"
+        android:clickable="true"
+        android:onClick="openWebUrl"
+        android:cursorVisible="false"
+        android:linksClickable="false"
+        tools:ignore="TextViewEdits"
+        android:focusable="true" />
+
+
+
+
+</RelativeLayout>

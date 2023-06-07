@@ -1,0 +1,6 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF" /> <!-- Color de fondo del cuadro de diálogo, en este caso blanco (#FFFFFF) -->
+    <corners android:radius="16dp" /> <!-- Radio de las esquinas, en este caso 20dp -->
+    <alpha android:alpha="0.5"/>
+
+</shape>

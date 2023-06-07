@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name" translatable="false">Radio Edelweiss</string>
+    <string name="listin">Estoy escuchando </string>
+    <string name="on">" en "</string>
+    <string name="you_to">. Tú también puedes escuchar usando esta app: "</string>
+    <string name="title_sleep_mode">Modo de Sueño</string>
+    <string name="title_off">APAGADO</string>
+    <string name="format_minutes">Minutos: %d</string>
+    <string name="format_minute">Minutos: %d</string>
+    <string name="title_done">Hecho</string>
+    <string name="no">No</string>
+    <string name="yes">Sí</string>
+    <string name="do_you_want_to_exit_the_app">¿Quieres salir de la app?</string>
+    <string name="minimize">MINIMIZAR</string>
+    <string name="top_chart">Top Chart</string>
+    <string name="default_notification_channel_id" translatable="false">channlex</string>
+    <string name="app_id" translatable="false">ca-app-pub-2426962149272899~7257933441</string>
+    <string name="whatsapp_message" translatable="false">Conectado desde la app!</string>
+    <string name="whatsapp_number" translatable="false">56992747171</string>
+    <string name="onesignal_app_id" translatable="false">3a6da09d-9a7b-4ddd-97ce-9b98f320694d</string>
+    <string name="title_activity_drawer" translatable="false">Drawer</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="nav_header_title" translatable="false">Android Studio</string>
+    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="open_nav" translatable="false">Open Navigation Drawer</string>
+    <string name="close_nav" translatable="false">Close Navigation Drawer</string>
+    <string name="facebook" translatable="false">ic_facebook</string>
+    <string name="telefono" translatable="false">+56452323600</string>
+    <string name="email_destino" translatable="false">contacto@edelweiss.fm</string>
+    <string name="url_open" translatable="false">https://www.edelweiss.fm</string>
+    <string name="app_version" translatable="false">Versión: %1$s</string>
+    <string name="sociales" translatable="false">Sociales</string>
+    <string name="en_vivo" translatable="false">En Vivo!</string>
+    <string name="facebook_menu" translatable="false">Facebook</string>
+    <string name="instagram" translatable="false">Instagram</string>
+    <string name="whatsapp" translatable="false">Whatsapp</string>
+    <string name="contacto" translatable="false">Contacto</string>
+    <string name="e_mail" translatable="false">E-Mail</string>
+    <string name="telefono_menu" translatable="false">Telefono</string>
+    <string name="website" translatable="false">Website</string>
+    <string name="acerca_de_nosotros" translatable="false">Acerca de Nosotros</string>
+    <string name="version" translatable="false">Versión 2.6</string>
+    <string name="todo" translatable="false">TODO</string>
+    <string name="todo2" translatable="false">TODO</string>
+    <string name="todo3" translatable="false">TODO</string>
+    <string name="todo4" translatable="false">TODO</string>
+    <string name="five_star_emoji" translatable="false">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</string>
+    <string name="aboutus" translatable="false">Somos la radio del adulto joven!, transmitimos desde la región de la Araucanía con una extensa red de estaciones a lo largo del sur de Chile para llevar lo mejor de la música de tus mejores años y programas de alto impacto cada día. Gracias por ser parte de Edelweiss!</string>
+    <string name="dialog_title" translatable="false">Actualización disponible</string>
+    <string name="dialog_message" translatable="false">Hay una nueva versión de la aplicación disponible. ¿Deseas actualizar ahora?</string>
+    <string name="dialog_positive_button" translatable="false">Actualizar</string>
+    <string name="dialog_negative_button" translatable="false">Más tarde</string>
+    <string name="dialog_error_title" translatable="false">Error de actualización</string>
+    <string name="dialog_error_message" translatable="false">Se produjo un error al descargar la actualización. Por favor, inténtalo más tarde.</string>
+    <string name="dialog_complete_title" translatable="false">Instalación completa</string>
+    <string name="dialog_complete_message" translatable="false">La actualización se ha completado. Reinicia la aplicación para aplicar los cambios.</string>
+    <string name="install_dialog_button" translatable="false">Actualizar</string>
+    <string name="update_dialog_title" translatable="false">Dialogo 1</string>
+    <string name="update_dialog_message" translatable="false">Dialogo2</string>
+    <string name="update_dialog_button" translatable="false">Actualizacion Disponible!</string>
+    <string name="install_dialog_title" translatable="false">tituloinstalacion</string>
+    <string name="install_dialog_message" translatable="false">mensajedialogoinstalacion</string>
+    <string name="restart_dialog_title" translatable="false">Reiniciar</string>
+    <string name="restart_dialog_message" translatable="false">La Aplicacion se reiniciara</string>
+    <string name="restart_dialog_button" translatable="false">Aceptar</string>
+    <string name="update_dialog_cancel_button" translatable="false">Cancelar</string>
+    <string name="update_cancel_message" translatable="false">Actualizacion Cancelada</string>
+    <string name="update_mensaje" translatable="false">Nueva actualizacion disponible, desea descargarla?</string>
+    <string name="actualizacion_disponible" translatable="false">Actualización Disponible</string>
+    <string name="app_not_installed" translatable="false">No se detectó la aplicación instalada. Abriendo desde la web.</string>
+    <string name="slogan_not_found" translatable="false">No hay programa disponible en este momento</string>
+    <string name="quality_txt">Ahora, Puedes seleccionar la calidad del stream de audio!</string>
+
+
+    <integer name="delay_time">60000</integer> // tiempo en ms
+</resources>

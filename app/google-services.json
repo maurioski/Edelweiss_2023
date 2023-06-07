@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "632319556093",
+    "project_id": "edelweiss-app-59f0a",
+    "storage_bucket": "edelweiss-app-59f0a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:632319556093:android:262c97ee998cd690d10194",
+        "android_client_info": {
+          "package_name": "com.edelweiss.stationapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "632319556093-ml5vvti799u0lttbfoicnldkks4nnouk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.edelweiss.stationapp",
+            "certificate_hash": "930db4923a22e90ab7c8154288ac3510315b5f5d"
+          }
+        },
+        {
+          "client_id": "632319556093-36k1hvhq9s8p5bm8j2p794u5qblmcjqj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMrOHUnnDTmHbS2RcNEz2oSfVnOitM5dg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "632319556093-36k1hvhq9s8p5bm8j2p794u5qblmcjqj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

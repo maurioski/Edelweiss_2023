@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:context=".MainActivity"
+    tools:openDrawer="start">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gnt_black">
+
+        <!--Aquí va todo el contenido de la actividad-->
+
+
+        <ImageView
+            android:id="@+id/background_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/splash"
+            android:scaleType="centerCrop"
+            tools:ignore="ContentDescription" />
+
+        <com.scwang.wave.MultiWaveHeader
+            android:id="@+id/wave_footer"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_alignParentBottom="true"
+            android:scaleY="-1"
+            app:mwhCloseColor="@color/edelweiss"
+            app:mwhGradientAngle="30"
+            app:mwhStartColor="@color/edelweiss"
+            app:mwhVelocity="4"
+            app:mwhWaveHeight="25dp"
+            app:mwhWaves="MultiWave" />
+
+        <RelativeLayout
+            android:id="@+id/backcolor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.3"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/baar"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                        app:contentInsetStartWithNavigation="0dp"
+                        app:navigationIcon="@drawable/baseline_menu_24">
+
+                        <ImageView
+                            android:id="@+id/tv"
+                            android:layout_width="36sp"
+                            android:layout_height="40sp"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="20dp"
+                            android:src="@drawable/ic_baseline_live_tv_24"
+                            tools:ignore="ContentDescription" />
+
+                    </androidx.appcompat.widget.Toolbar>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="230dp"
+                        android:layout_height="230dp"
+                        android:layout_gravity="center"
+                        app:cardBackgroundColor="#00000000"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="0dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <ImageView
+                                android:id="@+id/albumart"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:contentDescription="@string/todo"
+                                android:src="@drawable/logo_icon" />
+
+                            <FrameLayout
+                                android:id="@+id/hhhh"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <FrameLayout
+                                    android:id="@+id/fl_adplaceholder"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </FrameLayout>
+
+                        </RelativeLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <com.edelweiss.stationapp.EqualizerView
+                        android:id="@+id/equalizer"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="40dp"
+                        app:barColor="#fff"
+                        app:barCount="20"
+                        app:barWidth="6dp"
+                        app:marginLeft="2dp"
+                        app:marginRight="2dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".7"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+
+                    <TextView
+                        android:id="@+id/clockTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="false"
+                        android:layout_centerVertical="false"
+                        android:layout_marginTop="1dp"
+                        android:fontFamily="@font/stockholm"
+                        android:foregroundGravity="top"
+                        android:padding="15dp"
+                        android:textColor="@color/gnt_white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/song_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:ellipsize="marquee"
+                        android:fontFamily="@font/stockholm"
+                        android:gravity="center"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/app_name"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/slogan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="-4dp"
+                        android:ellipsize="marquee"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:lineSpacingExtra="8sp"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold|italic"
+                        android:typeface="normal"
+                        tools:padding="1dp"
+                        tools:text="Nombre del programa" />
+
+
+                    <TextView
+                        android:id="@+id/kbps"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="-4dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:lineSpacingExtra="8sp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="10sp"
+                        android:textStyle="bold|italic"
+                        android:typeface="normal"
+                        android:text="Calidad automática" />
+
+                    <LinearLayout
+                        android:id="@+id/ddd"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="invisible"
+                        android:weightSum="1">
+
+                    </LinearLayout>
+
+                    <SeekBar
+                        android:id="@+id/seekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:backgroundTintMode="add"
+                        android:progressBackgroundTint="@color/colorPrimary"
+                        android:progressTint="@color/edelweiss"
+                        android:thumbTint="@color/edelweiss" />
+
+                    <RelativeLayout
+                        android:id="@+id/ccc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/rounded_bg"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:id="@+id/iv_playpause"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_centerInParent="true"
+                            android:contentDescription="@string/todo2"
+                            android:src="@drawable/pause"
+                            app:tint="@android:color/white"
+                            tools:ignore="PrivateResource" />
+
+                        <ImageView
+                            android:id="@+id/share"
+                            android:layout_width="40sp"
+                            android:layout_height="40sp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="25dp"
+                            android:layout_toEndOf="@id/iv_playpause"
+                            android:contentDescription="@string/todo3"
+                            android:src="@drawable/share2" />
+
+                        <ImageView
+                            android:id="@+id/quality"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="25dp"
+                            android:layout_toEndOf="@id/share"
+                            app:tint="@android:color/white"
+                            app:srcCompat="@drawable/audio_quality" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/version_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/gnt_black"
+                android:textSize="@dimen/small_font_size" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/timer"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="25dp"
+            android:contentDescription="@string/todo4"
+            android:src="@drawable/ic_timer_24"
+            android:visibility="invisible" />
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

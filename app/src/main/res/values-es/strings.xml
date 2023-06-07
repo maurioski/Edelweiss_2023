@@ -1,0 +1,18 @@
+<resources>
+
+    <string name="listin">Estoy Escuchando </string>
+    <string name="on"> en </string>
+    <string name="you_to">. Tu Tambien Puedes Escuchar Usando Esta Aplicacion.: "</string>
+    <string name="do_you_want_to_exit_the_app">¿Quieres Salir De La Aplicación?</string>
+    <string name="yes">SI</string>
+    <string name="no">NO</string>
+
+    <string name="title_sleep_mode">Dormir Mode</string>
+    <string name="title_off">Apagar</string>
+    <string name="format_minutes">Minutos: %d</string>
+    <string name="format_minute">%1$s minuto</string>
+    <string name="title_done">Guardar</string>
+    <string name="minimize">MINIMIZAR</string>
+    <string name="top_chart">Tabla Superior</string>
+
+</resources>
