@@ -890,7 +890,11 @@ public class MainActivity extends AppCompatActivity implements AudioManager.OnAu
                 ExoService.getInstance().pause();
                 Intent kkk = new Intent(MainActivity.this, ExoService.class);
                 kkk.setAction(Constant.ACTION_PAUSE_STICKING);
-                startService(kkk);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    startForegroundService(kkk);
+                } else {
+                    startService(kkk);
+                }
                 iv_playpause.setImageResource(R.drawable.play);
 
                 Intent startIntent1 = new Intent(MainActivity.this, Notification_Service.class);
@@ -910,7 +914,11 @@ public class MainActivity extends AppCompatActivity implements AudioManager.OnAu
 
                 Intent kkk = new Intent(MainActivity.this, ExoService.class);
                 kkk.setAction(Constant.ACTION_PLAY_STICKING);
-                startService(kkk);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    startForegroundService(kkk);
+                } else {
+                    startService(kkk);
+                }
 
                 Intent startIntent1 = new Intent(MainActivity.this, Notification_Service.class);
                 startIntent1.setAction(Constant.ACTION_PLAY_STICKING);
@@ -924,6 +932,7 @@ public class MainActivity extends AppCompatActivity implements AudioManager.OnAu
             }
         }
     }
+
     public void showDialogSleepMode() {
         try {
             View mView = LayoutInflater.from(this).inflate(R.layout.dialog_sleep_time, findViewById(android.R.id.content), false);
@@ -1032,7 +1041,11 @@ public class MainActivity extends AppCompatActivity implements AudioManager.OnAu
 
             Intent kk = new Intent(getApplicationContext(), Notification_Service.class);
             kk.setAction(Constant.ACTION_PLAY_STICKING);
-            startService(kk);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                startForegroundService(kk);
+            } else {
+                startService(kk);
+            }
             equalizer.stopBars();
 
         } else {
@@ -1048,11 +1061,19 @@ public class MainActivity extends AppCompatActivity implements AudioManager.OnAu
         Constant.IS_PLAYING = true;
         Intent kkk = new Intent(getApplicationContext(), ExoService.class);
         kkk.setAction(Constant.ACTION_PLAY_STICKING);
-        startService(kkk);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            startForegroundService(kkk);
+        } else {
+            startService(kkk);
+        }
 
         Intent kk = new Intent(getApplicationContext(), Notification_Service.class);
         kk.setAction(Constant.ACTION_PLAY_STICKING);
-        startService(kk);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            startForegroundService(kk);
+        } else {
+            startService(kk);
+        }
 
         //SetMetaData();
 
@@ -1236,11 +1257,19 @@ public class MainActivity extends AppCompatActivity implements AudioManager.OnAu
 
         Intent ddd = new Intent(getApplicationContext(), ExoService.class);
         ddd.setAction(Constant.ACTION_PAUSE_STICKING);
-        stopService(ddd);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            startForegroundService(ddd);
+        } else {
+            startService(ddd);
+        }
 
         Intent dddd = new Intent(getApplicationContext(), Notification_Service.class);
         dddd.setAction(Constant.ACTION_PAUSE_STICKING);
-        startService(dddd);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            startForegroundService(dddd);
+        } else {
+            startService(dddd);
+        }
 
         unregisterReceiver(receiver1);
         unregisterReceiver(reciever_cross);
@@ -1251,7 +1280,6 @@ public class MainActivity extends AppCompatActivity implements AudioManager.OnAu
 
         // Detener la tarea de actualización del programa al destruir la actividad
         handler.removeCallbacks(updateProgramRunnable);
-
     }
 
     public class Cross_Receiver extends BroadcastReceiver {
