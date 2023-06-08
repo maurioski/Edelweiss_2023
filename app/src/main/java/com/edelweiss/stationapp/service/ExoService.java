@@ -301,26 +301,30 @@ public class ExoService extends Service {
             wifiLock = ((WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE))
                     .createWifiLock(WifiManager.WIFI_MODE_FULL, "RadiophonyLock");
             wifiLock.acquire();
-            Uri uri = Uri.parse(station);
 
-            DataSource.Factory dataSourceFactory = new DefaultHttpDataSource.Factory()
-                    .setUserAgent(Util.getUserAgent(getApplicationContext(), getString(R.string.app_name)));
+            if (station != null && !station.isEmpty()) {
+                Uri uri = Uri.parse(station);
 
-            if (station.endsWith(".m3u8")) {
-                HlsMediaSource hlsMediaSource = new HlsMediaSource.Factory(dataSourceFactory)
-                        .setAllowChunklessPreparation(true)
-                        .createMediaSource(MediaItem.fromUri(uri));
+                DataSource.Factory dataSourceFactory = new DefaultHttpDataSource.Factory()
+                        .setUserAgent(Util.getUserAgent(getApplicationContext(), getString(R.string.app_name)));
 
-                exoPlayer.setMediaSource(hlsMediaSource);
-            } else {
-                MediaSource mediaSource = new ProgressiveMediaSource.Factory(dataSourceFactory)
-                        .createMediaSource(MediaItem.fromUri(uri));
-                exoPlayer.setMediaSource(mediaSource);
+                if (station.endsWith(".m3u8")) {
+                    HlsMediaSource hlsMediaSource = new HlsMediaSource.Factory(dataSourceFactory)
+                            .setAllowChunklessPreparation(true)
+                            .createMediaSource(MediaItem.fromUri(uri));
+
+                    exoPlayer.setMediaSource(hlsMediaSource);
+                } else {
+                    MediaSource mediaSource = new ProgressiveMediaSource.Factory(dataSourceFactory)
+                            .createMediaSource(MediaItem.fromUri(uri));
+                    exoPlayer.setMediaSource(mediaSource);
+                }
+
+                exoPlayer.prepare();
+                exoPlayer.setPlayWhenReady(true);
             }
 
-            exoPlayer.prepare();
-            exoPlayer.setPlayWhenReady(true);
-        } catch (IllegalArgumentException | SecurityException | IllegalStateException e1) {
+        } catch (IllegalArgumentException | SecurityException | IllegalStateException | NullPointerException e1) {
             // Manejar la excepción adecuadamente
         }
     }

@@ -38,20 +38,6 @@
 
         </com.google.android.exoplayer2.ui.PlayerView>
 
-        <LinearLayout
-            android:id="@+id/chromecast_layout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="end"
-            android:padding="8dp">
-
-            <androidx.mediarouter.app.MediaRouteButton
-                android:id="@+id/media_route_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-        </LinearLayout>
-
     </RelativeLayout>
 
     <WebView

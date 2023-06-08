@@ -111,6 +111,7 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements AudioManager.OnAudioFocusChangeListener {
 
+
     private static final int NOTIFICATION_ID = 1;
 
     private static final String PREF_SHOW_DIALOG = "new_quality";
@@ -280,6 +281,7 @@ public class MainActivity extends AppCompatActivity implements AudioManager.OnAu
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -884,7 +886,6 @@ public class MainActivity extends AppCompatActivity implements AudioManager.OnAu
     @Override
     public void onAudioFocusChange(int focusChange) {
         if (focusChange <= 0) {
-            // LOSS -> PAUSE
             if (exoPlayer != null) {
                 ExoService.getInstance().pause();
                 Intent kkk = new Intent(MainActivity.this, ExoService.class);
@@ -903,9 +904,7 @@ public class MainActivity extends AppCompatActivity implements AudioManager.OnAu
                 Constant.IS_PLAYING = false;
             }
         } else {
-            // GAIN -> PLAY
             if (exoPlayer != null) {
-                // iv_playpause_small.setImageResource(R.drawable.ic_pause_button);
                 iv_playpause.setImageResource(R.drawable.pause);
                 equalizer.animateBars();
 

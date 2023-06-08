@@ -1,5 +1,6 @@
 package com.edelweiss.stationapp;
 
+import android.annotation.SuppressLint;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.graphics.Color;
@@ -54,7 +55,17 @@ public class TvActivity extends AppCompatActivity implements Player.Listener {
     boolean rotation = false;
     ProgressBar progressBar;
     Handler handler = new Handler();
-    //WebView wv1;
+
+    private PlayerReleaseListener playerReleaseListener;
+
+
+    public interface PlayerReleaseListener {
+        void onPlayerReleased();
+    }
+
+    public void setPlayerReleaseListener(PlayerReleaseListener listener) {
+        this.playerReleaseListener = listener;
+    }
 
     @Override
     public void onConfigurationChanged(@NonNull Configuration newConfig) {
@@ -84,7 +95,7 @@ public class TvActivity extends AppCompatActivity implements Player.Listener {
         background = findViewById(R.id.background);
         progressBar = findViewById(R.id.progressBar);
         ImageView back = findViewById(R.id.back);
-        ImageView Iv_video_resize = findViewById(R.id.Iv_video_resize);
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) ImageView Iv_video_resize = findViewById(R.id.Iv_video_resize);
 
        /* wv1=findViewById(R.id.webview);
         WebSettings settings = wv1.getSettings();
@@ -143,7 +154,7 @@ public class TvActivity extends AppCompatActivity implements Player.Listener {
 
 
         back.setOnClickListener(view -> {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
             releasePlayer();
             onBackPressed();
         });
@@ -162,8 +173,12 @@ public class TvActivity extends AppCompatActivity implements Player.Listener {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         releasePlayer();
+
+        if (playerReleaseListener != null) {
+            playerReleaseListener.onPlayerReleased();
+        }
     }
 
     private static class MyBrowser extends WebViewClient {
